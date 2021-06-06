@@ -17,18 +17,50 @@
             <noscript>Your browser does not support JavaScript!</noscript>  <!-- The <noscript> tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support script. The <noscript> element can be used in both <head> and <body>. When used inside <head>, the <noscript> element could only contain <link>, <style>, and <meta> elements. -->
         </head>
         <body>
-            <div class="topnav">
-                <a href="https://mail.google.com">Gmail</a>
-                <a href="https://www.google.nl/imghp?hl=es-419&authuser=0&ogbl">Images</a>
-                <a class="nav-link" href="#"><svg><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg></a>
-                <a href="#account"><button type="button" class="accountButton">J</button></a>            
-            </div>
-            <div class="google-logo">
-                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
-            </div> 
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-            </div>
+            <nav class="nav">
+                <div class="topnav">
+                    <a href="https://mail.google.com">Gmail</a>
+                    <a href="https://www.google.nl/imghp?hl=es-419&authuser=0&ogbl">Images</a>
+                    <a class="nav-link" href="#"><svg><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg></a>
+                    <a href="#account"><button type="button" class="accountButton">J</button></a>            
+                </div>
+            </nav>
+            <main class="main">
+                <div class="google-logo">
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+                </div> 
+                <div class="search-bar">
+                    <img class="search-icon" src="images/outline_search_black_24dp.png" alt="Magnifying glass">
+                    <input class="search.input" type="text" placeholder="">
+                    <button>
+                        <img class="mic-icon" src="images/outline_mic_black_24dp.png" alt="Microphone">
+                    </button>
+                </div>
+                <div class="search-buttons">
+                    <button class="search-button">Google search</button>
+                    <button class="lucky-button">I'm feeling lucky</button>
+                </div>
+                <div class="languajes">
+                    <p>Google offered in: 
+                        <a href="https://www.google.com/setprefs?sig=0_08WzvgK7QPb54L3-BMOv99E6wto%3D&hl=es&source=homepage&sa=X&ved=0ahUKEwj-utblz4HxAhWR_KQKHaTpB6gQ2ZgBCA0">Español</a>
+                        <a href="https://www.google.com/setprefs?sig=0_08WzvgK7QPb54L3-BMOv99E6wto%3D&hl=nl&source=homepage&sa=X&ved=0ahUKEwj-utblz4HxAhWR_KQKHaTpB6gQ2ZgBCA4">Nederlands</a>
+                        <a href="https://www.google.com/setprefs?sig=0_08WzvgK7QPb54L3-BMOv99E6wto%3D&hl=fy&source=homepage&sa=X&ved=0ahUKEwj-utblz4HxAhWR_KQKHaTpB6gQ2ZgBCA8">Frysk</a>
+                    </p>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="left">
+                    <a class="footer-link" href="#">About Google</a>
+                    <a class="footer-link" href="#">Advertising</a>
+                    <a class="footer-link" href="#">Business</a>
+                    <a class="footer-link" href="#">How Search works</a>
+                </div>
+                <div class="right">
+                    <a class="footer-link" href="#">Privacy</a>
+                    <a class="footer-link" href="#">Terms</a>
+                    <a class="footer-link" href="#">Settings</a>
+                </div>
+            </footer>
         </body>
     </html>
 </DOCTYPE>
