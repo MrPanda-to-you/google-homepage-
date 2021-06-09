@@ -2,7 +2,162 @@
     <html lang="en"> <!-- HTML Language Code Reference: ISO Language Code. In XHTML, the language is declared inside the <html> tag -->
         <head> <!-- The head of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page <title>, links to CSS (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document.) -->
             <title>An attempt to emulate Google with The Odin Project</title> <!-- The <title> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. The <title> tag is required in HTML documents! The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results. The <title> element: defines a title in the browser toolbar; provides a title for the page when it is added to favorites; displays a title for the page in search-engine results. Here are some tips for creating good titles: Go for a longer, descriptive title (avoid one- or two-word titles); search engines will display about 50-60 characters of the title, so try not to have titles longer than that; do not use just a list of words as the title (this may reduce the page's position in search results). So, try to make the title as accurate and meaningful as possible. -->
-            <style rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/MrPanda-to-you/google-homepage-/main/style.css"></style> <!-- Link to an external style sheet: The rel attribute specifies the relationship between the current document and the linked document (only used if the href attribute is present. The <link> tag defines the relationship between the current document and an external resource; the <link> tag is most often used to link to external style sheets; the <link> element is an empty element, it contains attributes only. This is an example on how to establish (inside the <style> element) how HTML elements should render in a browser. The <style> tag is used to define style information (CSS) for a document. -->
+            <style>
+                /* Declaring global CSS variables */
+                    :root {
+                    }
+
+                    A {
+                    text-decoration: none;
+                    }
+                    
+                    img, A {
+                    border:none; 
+                    outline: none;
+                    }
+
+                    /* Declaring html style */
+                    html {
+                    font-size: 55%;
+                    }
+
+                    /* Declaring body style */
+                    body {
+                    font-family: arial, sans-serif;
+                    font-size: 1.6rem;
+                    line-height: 1.6;
+                    }
+
+
+                    .app-icon {
+                    max-width: 7%;
+                    height: auto;
+                    border: none;
+                    padding: 3%;
+                    }
+
+                    .account-icon {
+                    max-width: 11%;
+                    height: auto;
+                    border: none;
+                    padding: 3%;
+                    }
+
+                    .gmail{
+                    padding: 3%;
+                    }
+
+                    .images{
+                    padding: 3%;
+                    }
+
+                    .topnav{
+                    float: none;
+                    position: absolute;
+                    top: 7%;
+                    right: 1px;
+                    display: flex;
+                    align-items:center;
+                    }
+
+                    .main{
+                    float: none;
+                    position: absolute;
+                    top: 20%;
+                    left: 25%; 
+                    }
+
+                    .google-logo {
+                    width: 50%;
+                    float: none;
+                    position: relative;
+                    left: 16%; 
+                    padding-bottom: 30px;
+                    padding-top: 100px;
+                    }
+  /* Using flexbox: In this approach, we will use flexbox. For this, we will use CSS display property combined with align-items property. We need to create a parent element that contain both image and text. After declaring the parent element as flexbox using display: flex; we can align the items to the center using align-items: center;. */
+                    .search-bar {
+                        display: flex;
+                        align-items:center;
+                        border: solid;
+                        border-radius: 25px;
+                        padding: 3px;
+                        border-width: thin;
+                        border-color: lightgrey;
+                        width:80%;
+                    }
+
+                    .search-bar:hover,
+                    .search-bar:focus-within {
+                    border-color: white;
+                    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+                    }
+
+                    .search-input{
+                    border: none;
+                    }
+
+                    .search-icon{
+                    opacity: 50%;
+                    }
+                    .search-buttons {
+                    float: none;
+                    position: relative;
+                    right: 11%;
+                    padding: 25px;    
+                    }
+
+                    .search-button {
+                        border: none;
+                        border-radius: 5px;
+                        background-color: #F5F5F5; 
+                        float: none;
+                        position: absolute;
+                        left: 25%; 
+                        height: 35px;
+                        width: 130px;
+                    }
+
+                    .lucky-button {
+                        border: none;
+                        border-radius: 5px;
+                        background-color: #F5F5F5; 
+                        float: none;
+                        position: absolute;
+                        right: 25%; 
+                        height: 35px;
+                        width: 130px;
+                    }
+
+                    .languajes {
+                        float: none;
+                        position: absolute;
+                        left: 13%;
+                        padding-top: 25px;
+                    }
+
+                    .footer {
+                        display: flex;
+                        float: none;
+                        position: absolute;
+                        bottom: 3%;
+                    }
+
+                    .left {
+                        float: none;
+                        position: relative;
+                        left: 5%;
+                    }
+
+                    .right {
+                        float: none;
+                        position: relative;
+                        left: 131%;
+                    }
+                  
+
+           
+            </style> <!-- Link to an external style sheet: The rel attribute specifies the relationship between the current document and the linked document (only used if the href attribute is present. The <link> tag defines the relationship between the current document and an external resource; the <link> tag is most often used to link to external style sheets; the <link> element is an empty element, it contains attributes only. This is an example on how to establish (inside the <style> element) how HTML elements should render in a browser. The <style> tag is used to define style information (CSS) for a document. -->
             <base href = https://www.google.com /> <!-- The HTML <base> tag is used to specify a base URI, or URL, for relative links. For example, you can set the base URL once at the top of your page in header section, then all subsequent relative links will use that URL as a starting point. -->
             <meta content="The content of the meta information"> 
                 <meta charset="UTF-8"> <!-- The charset attribute specifies the character encoding for the HTML document. The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world. -->
@@ -18,26 +173,17 @@
         <body> <!-- The <body> tag defines the document's body. The <body> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Note: There can only be one <body> element in an HTML document.-->
             <nav class="nav"> <!-- The <nav> HTML element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.-->
                 <div class="topnav"> <!-- The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The <div> tag is easily styled by using the class or id attribute. Any sort of content can be put inside the <div> tag! -->
-                    <a href="https://mail.google.com">Gmail</a> <!-- The <a> tag defines a hyperlink, which is used to link from one page to another. The most important attribute of the <a> element is the href attribute, which indicates the link's destination. -->
-                    <a href="https://www.google.nl/imghp?hl=es-419&authuser=0&ogbl">Images</a>
-                    <button type="submit" formaction="https://www.google.nl/intl/en/about/products"> <!-- Trying to create a button acting like a link with the formaction attribute -->
-                        <img class="app-icon" src="https://raw.githubusercontent.com/MrPanda-to-you/google-homepage-/main/images/Google_apps.png" alt="" >
-                    </button>
-                    <button onclick="https://accounts.google.com/"> <!-- Trying to create a button acting like a link with the onclick attribute -->
-                        <img class="account-icon" src="https://raw.githubusercontent.com/MrPanda-to-you/google-homepage-/main/images/Google_page_account.png" alt="">                
-                    </button>
-                    </div>
+                    <a class="gmail" href="https://mail.google.com">Gmail</a> <!-- The <a> tag defines a hyperlink, which is used to link from one page to another. The most important attribute of the <a> element is the href attribute, which indicates the link's destination. -->
+                    <a class="images" href="https://www.google.nl/imghp?hl=es-419&authuser=0&ogbl">Images</a>
+                    <img class="app-icon" src="https://raw.githubusercontent.com/MrPanda-to-you/google-homepage-/main/images/Google_apps.png" alt="" >
+                    <img class="account-icon" src="https://raw.githubusercontent.com/MrPanda-to-you/google-homepage-/main/images/Google_page_account.png" alt="">                
+                </div>
             </nav>
             <main class="main"> <!-- The <main> tag specifies the main content of a document. The content inside the <main> element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms. Note: There must not be more than one <main> element in a document. The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element. -->
-                <div class="google-logo">
-                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo"> <!-- The HTML <img> tag is used to embed an image in a web page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. The <img> tag is empty, it contains attributes only, and does not have a closing tag. The <img> tag has two required attributes: src - Specifies the path to the image; alt - Specifies an alternate text for the image -->
-                </div> 
+                <img class="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo"> <!-- The HTML <img> tag is used to embed an image in a web page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image. The <img> tag is empty, it contains attributes only, and does not have a closing tag. The <img> tag has two required attributes: src - Specifies the path to the image; alt - Specifies an alternate text for the image -->
                 <div class="search-bar">
                     <img class="search-icon" src="https://raw.githubusercontent.com/MrPanda-to-you/google-homepage-/main/images/outline_search_black_24dp.png" alt="">
                     <input class="search-input" type="text" placeholder=""> <!-- The <input> tag specifies an input field where the user can enter data. The <input> element is the most important form element. The <input> element can be displayed in several ways, depending on the type attribute. -->
-                    <button> <!-- The <button> tag defines a clickable button. Inside a <button> element you can put text (and tags like <i>, <b>, <strong>, <br>, <img>, etc.). That is not possible with a button created with the <input> element! -->
-                        <img class="mic-icon" src="https://raw.githubusercontent.com/MrPanda-to-you/google-homepage-/main/images/outline_mic_black_24dp.png" alt="">
-                    </button>
                 </div>
                 <div class="search-buttons">
                     <button class="search-button">Google search</button>
